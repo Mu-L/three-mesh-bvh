@@ -459,9 +459,9 @@ export class ObjectBVH extends BVH {
 					// instance were active
 					try {
 
-						object.getVisibleAt( instance );
+						object.getVisibleAt( iter );
 
-						target[ index ] = ( instance << idBits ) | i;
+						target[ index ] = ( iter << idBits ) | i;
 						instance ++;
 						index ++;
 
