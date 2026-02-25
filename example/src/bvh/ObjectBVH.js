@@ -448,10 +448,10 @@ export class ObjectBVH extends BVH {
 			} else if ( object.isBatchedMesh && includeInstances ) {
 
 				const { instanceCount, maxInstanceCount } = object;
-				let instance = 0;
+				let foundInstances = 0;
 				let iter = 0;
 
-				while ( instance < instanceCount && iter < maxInstanceCount ) {
+				while ( foundInstances < instanceCount && iter < maxInstanceCount ) {
 
 					iter ++;
 
@@ -462,7 +462,7 @@ export class ObjectBVH extends BVH {
 						object.getVisibleAt( iter );
 
 						target[ index ] = ( iter << idBits ) | i;
-						instance ++;
+						foundInstances ++;
 						index ++;
 
 					} catch {
