@@ -450,7 +450,7 @@ export class ObjectBVH extends BVH {
 				const { instanceCount, maxInstanceCount } = object;
 				let instance = 0;
 				let iter = 0;
-				// TODO: use a better check here, like "maxInstanceCount"
+
 				while ( instance < instanceCount && iter < maxInstanceCount ) {
 
 					iter ++;
